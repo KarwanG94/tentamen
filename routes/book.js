@@ -2,7 +2,7 @@ get = (req, res, next) => {
   var query;
 
   if (req.query.title) {
-    query = req.models.Book.findOne({title: req.query.title})
+    query = req.models.Book.find({title: req.query.title})
   }
   else{
     query = req.models.Book.find()
